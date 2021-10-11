@@ -37,7 +37,7 @@ console.groupEnd();
 console.groupCollapsed('6. Parašykite funkciją, kuri atspausdina paskutinio masyvo elemento indeksą');
 {
   
-
+  console.log(numbers[numbers.length - 1]); 
 }
 console.groupEnd();
 
