@@ -2,16 +2,16 @@ const numbers = [1, 4, -6, 3, 5, 10]
 
 console.groupCollapsed('1. Parašykite funkciją, kuri grąžina pirmą masyvo elementą.');
 {
- 
+
   console.log(numbers[0])
 }
 console.groupEnd();
 
 console.groupCollapsed('2. Parašykite funkciją, kuri pašalina pirmą masyvo elementą ir jį grąžina.');
 {
- const firstElement = numbers.shift();
+  const firstElement = numbers.shift();
 
- console.log(firstElement);
+  console.log(firstElement);
 }
 console.groupEnd();
 
@@ -36,26 +36,29 @@ console.groupEnd();
 
 console.groupCollapsed('6. Parašykite funkciją, kuri atspausdina paskutinio masyvo elemento indeksą');
 {
-// ...sprendimas ir spausdinimas
+  
+
 }
 console.groupEnd();
 
 console.groupCollapsed('7. Parašykite funkciją, kuri atspausdina kiekvieno masyvo elemento indeksus eilutėmis');
 {
+  let index = [];
   for (let i = 0; i < numbers.length; i++) {
-    console.log(i)
-    
+    index.push(i);
   }
+  console.log(index.join(' '));
 }
 console.groupEnd();
 
 console.groupCollapsed('8. Parašykite funkciją, kuri atspausdina kiekvieno masyvo elemento reikšmes eilutėmis');
 {
-for (let i = 0; i < numbers.length; i++) {
-  const str = numbers.join(',')
-  console.log(str);
-  
-}}
+  for (let i = 0; i < numbers.length; i++) {
+    const str = numbers.join(',')
+    console.log(str);
+
+  }
+}
 console.groupEnd();
 
 console.groupCollapsed('9. Parašykite funkciją, kuri atspausdina kiekvieno masyvo elemento indekso ir reikšmių poras eilutėmis, tokiu formatu:  ');
@@ -65,8 +68,8 @@ console.groupCollapsed('9. Parašykite funkciją, kuri atspausdina kiekvieno mas
 {
   function printArr(arr) {
     for (let i = 0; i < arr.length; i++) {
-      console.log('['+i+']'+ '=>'+ arr[i]);
-      
+      console.log('[' + i + ']' + '=>' + arr[i]);
+
     }
   }
   printArr(numbers);
@@ -85,10 +88,11 @@ console.groupEnd();
 
 console.groupCollapsed('11. Parašykite funkciją, kuri atspausdina kiekvieno masyvo elemento indeksus vienoje eilutėje: 0 1 2 3 ...');
 {
-//nepadariau
-
-
-  
+  let index = [];
+  for (let i = 0; i < numbers.length; i++) {
+    index.push(i);
+  }
+  console.log(index.join(' '));
 }
 
 console.groupEnd();
@@ -98,7 +102,7 @@ console.groupCollapsed('12. Parašykite funkciją, kuri atspausdina kiekvieno ma
   for (let i = 0; i < numbers.length; i++) {
     const str = numbers.join(' ')
     console.log(str);
-}
+  }
 }
 console.groupEnd();
 
@@ -107,9 +111,9 @@ console.groupCollapsed('13. Parašykite funkciją, kuri atspausdina kiekvieno ma
 {
   function printArr(arr) {
     for (let i = 0; i < arr.length; i++) {
-      
-      console.log('['+i+']'+ '=>'+ arr[i]);
-      
+
+      console.log('[' + i + ']' + '=>' + arr[i]);
+
     }
   }
   printArr(numbers);
