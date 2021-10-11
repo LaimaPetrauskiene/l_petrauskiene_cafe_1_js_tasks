@@ -512,7 +512,7 @@ console.log();
 //  Atlikus veiksmus, grąžinti pakeistą žodį
 console.group("25. Sukurkite funkciją, kuri pirmu parametru priimtų žodį, o antruoju - masyvą su raidėmis.");
 {
-  
+
 }
 //console.log('---');
 //const str = filterLetters('Brangakmienio paveikslas', ['a', 'i']);
@@ -525,32 +525,43 @@ console.log();
 console.group("26. Sukurkite funkciją, kuri pirmu parametrų priimą sakinį, kiekvieną tarpą pakeičia brūkšneliu ir grąžina pakeistą sakinį");
 {
   function replaceSpaceWithDash(str) {
-    // code ...
+
+    let temp = str
+    do {
+      str = temp;
+      temp = str.replace(' ', '-')
+    } while (str !== temp);
+    return str;
   }
-  // console.log('---');
-  // console.log({
-  //   'viens du trys': replaceSpaceWithDash('viens du trys'),
-  //   'as tave myliu': replaceSpaceWithDash('as tave myliu'),
-  //   'Bairis seniuk': replaceSpaceWithDash('Bairis seniuk'),
-  // })
-  // console.log('---');
+
+  console.log('---');
+  console.log({
+    'viens du trys': replaceSpaceWithDash('viens du trys'),
+    'as tave myliu': replaceSpaceWithDash('as tave myliu'),
+    'Bairis seniuk': replaceSpaceWithDash('Bairis seniuk'),
+  })
+  console.log('---');
 }
 console.groupEnd();
 console.log();
 
 console.group("27. Sukurkite funkciją, kuri pirmu parametru priima sakinį, ir kiekvieno žodžio pirmają raidę padaro didžiąja");
 {
-  
-  
-  
+  function capitalize(str) {
+    const words = str.split(' ');
+    for (let i = 0; i < words.length; i++) {
+      words[i] = words[i][0].toUpperCase() + words[i].slice(1);
+    }
+    return words.join(' ');
+  }
 
-  // console.log('---');
-  // console.log({
-  //   'viens du trys': capitalize('viens du trys'),
-  //   'as tave myliu': capitalize('as tave myliu'),
-  //   'Bairis seniuk': capitalize('Bairis seniuk'),
-  // })
-  // console.log('---');
+  console.log('---');
+  console.log({
+    'viens du trys': capitalize('viens du trys'),
+    'as tave myliu': capitalize('as tave myliu'),
+    'Bairis seniuk': capitalize('Bairis seniuk'),
+  })
+  console.log('---');
 }
 console.groupEnd();
 console.log();
@@ -558,13 +569,17 @@ console.log();
 console.group("28. Sukurkite funkciją, kuri atspausdina žodį atvirkščiai 'abc' -> 'cba'");
 {
   function strReverse(str) {
-    // code ...
+    let res = '';
+    for (let i = str.length - 1; i >= 0; i--) {
+      res += str[i];
+    }
+    console.log(str, '->', res);
   }
-  // console.log('---');
-  // strReverse('viens du trys');
-  // strReverse('as tave myliu');
-  // strReverse('Bairis seniuk');
-  // console.log('---');
+   console.log('---');
+   strReverse('viens du trys');
+   strReverse('as tave myliu');
+   strReverse('Bairis seniuk');
+   console.log('---');
 }
 console.groupEnd();
 console.log();
@@ -578,16 +593,21 @@ console.log();
 console.group("29. Sukurkite funkciją, kuri grąžina <true>, jeigu žodis yra palindromas (taip pat skaitosi iš abiejų pusių)");
 {
   function isPalyndrome(str) {
-    // code ...
+    let res = '';
+    for (let i = str.length - 1; i >= 0; i--) {
+      res += str[i];
+    }
+    return res === str;
+  
   }
-  // console.log('---');
-  // console.log({
-  //   'mama': isPalyndrome('mama'),
-  //   'mamam': isPalyndrome('mamam'),
-  //   '123321': isPalyndrome('123321'),
-  //   '123456': isPalyndrome('123456'),
-  // })
-  // console.log('---');
+   console.log('---');
+   console.log({
+     'mama': isPalyndrome('mama'),
+     'mamam': isPalyndrome('mamam'),
+     '123321': isPalyndrome('123321'),
+     '123456': isPalyndrome('123456'),
+   })
+   console.log('---');
 }
 console.groupEnd();
 console.log();
